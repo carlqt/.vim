@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/carltablante/Dropmysite/dms-resellers/config'
+let g:netrw_dirhist_2='/Users/carltablante/Dropmysite/dms-resellers'
+let g:netrw_dirhist_3='/Users/carltablante/Dropmysite/dms-resellers/lib'
+let g:netrw_dirhist_4='/Users/carltablante/Dropmysite/dms-resellers'
+let g:netrw_dirhist_5='/Users/carltablante/Dropmysite/dms-resellers/apidocs'
+let g:netrw_dirhist_6='/Users/carltablante/Dropmysite/dms-resellers'
+let g:netrw_dirhist_7='/Users/carltablante/Project/dms-resellers'
+let g:netrw_dirhist_8='/Users/carltablante/Dropmysite/dms-resellers'
