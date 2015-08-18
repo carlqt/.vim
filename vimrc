@@ -52,7 +52,7 @@ endif
 colorscheme solarized
 set background=dark
 
-" Santity Config
+" Sanity Config
 set nocompatible
 set encoding=utf-8
 set number
