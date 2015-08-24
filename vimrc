@@ -24,7 +24,6 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'slim-template/vim-slim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'schickling/vim-bufonly'
-
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -62,7 +61,8 @@ set hidden
 set history=1000
 noremap <C-u> :bp<cr>
 noremap <C-i> :bn<cr>
-map :bc<cr> :Bclose<cr>
+cabbr bc Bclose
+cabbr bo BufOnl
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " turn off auto comment
 " let g:netrw_liststyle=3
 
