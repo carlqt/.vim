@@ -24,6 +24,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'slim-template/vim-slim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'schickling/vim-bufonly'
+Plugin 'duggiefresh/vim-easydir'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -59,6 +60,7 @@ set backspace=indent,eol,start
 set autoread
 set hidden
 set history=1000
+inoremap jj <ESC>
 noremap <C-u> :bp<cr>
 noremap <C-i> :bn<cr>
 cabbr bc Bclose
