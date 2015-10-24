@@ -25,6 +25,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'schickling/vim-bufonly'
 Plugin 'duggiefresh/vim-easydir'
+Plugin 'derekwyatt/vim-scala'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -87,13 +88,10 @@ set splitright
 set splitbelow
 
 " vim-airline
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-let g:airline_left_sep = '▶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.crypt = '🔒'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled=0

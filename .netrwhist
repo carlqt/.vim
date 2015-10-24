@@ -1,2 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/carltablante/Project/vps_test'
+let g:netrw_dirhist_2='/Users/carltablante/vagrant/centos/7.0/files/vps_test'
+let g:netrw_dirhist_3='/Users/carltablante/Dropmysite/dms-resellers'
+let g:netrw_dirhist_4='/Users/carltablante/Project/vps_test'
+let g:netrw_dirhist_5='/Users/carltablante/Dropmysite/backup-server'
+let g:netrw_dirhist_6='/Users/carltablante/Project/vps_test'
+let g:netrw_dirhist_7='/Users/carltablante/vagrant/ubuntu/15.04'
