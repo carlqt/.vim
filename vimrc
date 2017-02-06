@@ -111,3 +111,4 @@ let NERDTreeMapJumpPrevSibling='v'
 
 " ctrlp
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_files=0
