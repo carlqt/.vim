@@ -19,6 +19,12 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'schickling/vim-bufonly'
 Plug 'duggiefresh/vim-easydir'
 Plug 'derekwyatt/vim-scala'
+Plug 'mxw/vim-jsx'
+Plug 'kchmck/vim-coffee-script'
+Plug 'henrik/vim-indexed-search'
+Plug 'gilsondev/lizard'
+Plug 'scrooloose/syntastic'
+Plug 'fatih/vim-go'
 call plug#end()            " required
 
 " Appearance
@@ -29,10 +35,12 @@ if !has("gui_running")
   let g:solarized_termtrans=1
   let g:solarized_termcolors=256
 endif
-colorscheme solarized
+colorscheme Crystallite
 set background=dark
 
 " Sanity Config
+filetype on
+filetype indent on
 set nocompatible
 set encoding=utf-8
 set number
@@ -85,9 +93,36 @@ let g:powerline_symbols = 'fancy'
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+map <C-f><C-n> :NERDTreeFind<CR>
 let NERDTreeMapJumpNextSibling='b'
 let NERDTreeMapJumpPrevSibling='v'
 
 " fzf
-let g:fzf_command_prefix = "Fzf"
-map <c-p> :FzfFiles<CR>
+map <C-p> :Files<CR>
+map <C-f><C-f> :Ag<CR>
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+" vim-go
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:go_get_update = 0
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"au FileType go nmap <leader>i <Plug>(go-info)
+
+" syntastic eslint setup
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+" jsx setup
+let g:jsx_ext_required = 0
