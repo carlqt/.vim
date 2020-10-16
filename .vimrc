@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
@@ -18,20 +17,26 @@ Plug 'slim-template/vim-slim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'schickling/vim-bufonly'
 Plug 'duggiefresh/vim-easydir'
-Plug 'derekwyatt/vim-scala'
 Plug 'mxw/vim-jsx'
 Plug 'kchmck/vim-coffee-script'
 Plug 'henrik/vim-indexed-search'
 Plug 'fatih/vim-go'
 Plug 'reewr/vim-monokai-phoenix'
 Plug 'pkukulak/idle'
+Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-pug'
+Plug 'gkjgh/cobalt'
+Plug 'fatih/molokai'
+Plug 'kien/ctrlp'
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()            " required
 
 " Appearance
 syntax on
-syntax enable
+syntax sync minlines=10000
+" syntax enable
 set t_Co=256
-colorscheme idle
+colorscheme cobalt
 set background=dark
 
 " Sanity Config
@@ -100,7 +105,9 @@ let NERDTreeMapJumpPrevSibling='v'
 map <C-p> :Files<CR>
 map <C-f><C-f> :Ag<CR>
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+let $FZF_TREE_COMMAND='(git ls-tree -r --name-only HEAD || find . -path "*/\.*" -prune -o -type f -print -o -type l -print | sed s/^..//) 2> /dev/null'
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""' "include hidden files
+"let $FZF_DEFAULT_COMMAND=$FZF_TREE_COMMAND
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -128,3 +135,6 @@ let g:syntastic_check_on_open = 0
 
 " jsx setup
 let g:jsx_ext_required = 0
+
+" include hidden files ctrlp
+let g:ctrlp_show_hidden = 1
