@@ -4,8 +4,8 @@ call plug#begin('~/.vim/plugged')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
@@ -27,7 +27,7 @@ Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
 Plug 'gkjgh/cobalt'
 Plug 'fatih/molokai'
-Plug 'kien/ctrlp'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dart-lang/dart-vim-plugin'
 call plug#end()            " required
 
@@ -102,6 +102,7 @@ let NERDTreeMapJumpNextSibling='b'
 let NERDTreeMapJumpPrevSibling='v'
 
 " fzf
+set rtp+=/usr/local/opt/fzf
 map <C-p> :Files<CR>
 map <C-f><C-f> :Ag<CR>
 let g:fzf_history_dir = '~/.local/share/fzf-history'
